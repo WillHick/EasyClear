@@ -66,12 +66,13 @@
             // ClearTick
             // 
             this.ClearTick.Interval = 1;
+            this.ClearTick.Tick += new System.EventHandler(this.ClearTick_Tick);
             // 
             // ToggleClearing
             // 
             this.ToggleClearing.BackgroundImage = global::EasyClearGit.Properties.Resources.icons8_checkmark_192;
             this.ToggleClearing.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ToggleClearing.FlatAppearance.BorderSize = 0;
+            this.ToggleClearing.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.ToggleClearing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
             this.ToggleClearing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.ToggleClearing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -157,7 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(381, 627);
+            this.ClientSize = new System.Drawing.Size(381, 322);
             this.ControlBox = false;
             this.Controls.Add(this.TotalText);
             this.Controls.Add(this.TotalNum);
@@ -170,6 +171,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UI";
             this.Opacity = 0.99D;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "EasyClear";
             this.Load += new System.EventHandler(this.UI_Load);
             this.ToggleFeatureBar.ResumeLayout(false);
