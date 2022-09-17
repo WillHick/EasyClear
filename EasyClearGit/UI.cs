@@ -61,15 +61,15 @@ namespace EasyClearGit
             
             if (Clipboard.ContainsText())
             {
-                
+                Clipboard.Clear();
             }
             if (Clipboard.ContainsImage())
             {
-
+                Clipboard.Clear();
             }
             if (Clipboard.ContainsAudio())
             {
-
+                Clipboard.Clear();
             }
         }
     }
