@@ -31,5 +31,20 @@ namespace EasyClearGit
         {
             this.Hide();
         }
+        private void TopMostToggle_Click(object sender, EventArgs e)
+        {
+            if (this.TopMost == false)
+            {                
+                TopMostToggle.BackgroundImage = EasyClearGit.Properties.Resources.icons8_uncheckmark_192;
+
+                this.TopMost = true;
+            }
+            else if (this.TopMost == true)
+            {
+                TopMostToggle.BackgroundImage = EasyClearGit.Properties.Resources.icons8_checkmark_192;
+
+                this.TopMost = false;
+            }
+        }
     }
 }

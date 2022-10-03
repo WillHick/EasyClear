@@ -96,6 +96,7 @@
             this.TopMostToggle.Size = new System.Drawing.Size(48, 41);
             this.TopMostToggle.TabIndex = 4;
             this.TopMostToggle.UseVisualStyleBackColor = true;
+            this.TopMostToggle.Click += new System.EventHandler(this.TopMostToggle_Click);
             // 
             // DoubleClickUI
             // 
