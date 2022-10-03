@@ -33,6 +33,7 @@
             this.MoreHeader = new System.Windows.Forms.Label();
             this.TopMostHeader = new System.Windows.Forms.Label();
             this.TopMostToggle = new System.Windows.Forms.Button();
+            this.ExitApp = new System.Windows.Forms.Button();
             this.MoreFeatureBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +85,7 @@
             // 
             // TopMostToggle
             // 
-            this.TopMostToggle.BackgroundImage = global::EasyClearGit.Properties.Resources.icons8_checkmark_192;
+            this.TopMostToggle.BackgroundImage = global::EasyClearGit.Properties.Resources.icons8_uncheckmark_192;
             this.TopMostToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.TopMostToggle.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.TopMostToggle.FlatAppearance.BorderSize = 0;
@@ -98,13 +99,31 @@
             this.TopMostToggle.UseVisualStyleBackColor = true;
             this.TopMostToggle.Click += new System.EventHandler(this.TopMostToggle_Click);
             // 
+            // ExitApp
+            // 
+            this.ExitApp.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ExitApp.FlatAppearance.BorderSize = 0;
+            this.ExitApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.ExitApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.ExitApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitApp.Font = new System.Drawing.Font("Marlett", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitApp.Location = new System.Drawing.Point(10, 157);
+            this.ExitApp.Name = "ExitApp";
+            this.ExitApp.Size = new System.Drawing.Size(217, 45);
+            this.ExitApp.TabIndex = 6;
+            this.ExitApp.Text = "Exit Application";
+            this.ExitApp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ExitApp.UseVisualStyleBackColor = true;
+            this.ExitApp.Click += new System.EventHandler(this.ExitApp_Click);
+            // 
             // DoubleClickUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(394, 616);
+            this.ClientSize = new System.Drawing.Size(394, 213);
             this.ControlBox = false;
+            this.Controls.Add(this.ExitApp);
             this.Controls.Add(this.TopMostToggle);
             this.Controls.Add(this.MoreFeatureBar);
             this.Controls.Add(this.TopMostHeader);
@@ -129,5 +148,6 @@
         private System.Windows.Forms.Button HideMore;
         private System.Windows.Forms.Label TopMostHeader;
         private System.Windows.Forms.Button TopMostToggle;
+        private System.Windows.Forms.Button ExitApp;
     }
 }

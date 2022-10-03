@@ -35,16 +35,20 @@ namespace EasyClearGit
         {
             if (this.TopMost == false)
             {                
-                TopMostToggle.BackgroundImage = EasyClearGit.Properties.Resources.icons8_uncheckmark_192;
+                TopMostToggle.BackgroundImage = EasyClearGit.Properties.Resources.icons8_checkmark_192;
 
                 this.TopMost = true;
             }
             else if (this.TopMost == true)
             {
-                TopMostToggle.BackgroundImage = EasyClearGit.Properties.Resources.icons8_checkmark_192;
+                TopMostToggle.BackgroundImage = EasyClearGit.Properties.Resources.icons8_uncheckmark_192;
 
                 this.TopMost = false;
             }
+        }
+        private void ExitApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
