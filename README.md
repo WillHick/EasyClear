@@ -7,6 +7,9 @@ Simple Clipboard Protection App For Windows - Run and Forget. While running, cop
 # Requirements
 Built and tested on Windows 11, Works on Windows 10 - Other system versions havent been tested on.
 
+# Privacy Policy
+The EasyClear application collects no data at all from user to device data none is stored, uploaded or collected. The app uses "Clipboard.Contains" (Images, Text or Audio) to detect this data and instantly clears everything on detection.
+
 # Credits
 Developed By WillHick
 
