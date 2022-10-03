@@ -16,6 +16,11 @@ namespace EasyClearGit
         [DllImport("Gdi32.dll")]
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
+        EasyClearGit.DoubleClickUI DCUI = new EasyClearGit.DoubleClickUI();
+
+        private int _addtxtcount = 0;
+        private int _addimgcount = 0;
+        private int _addtotalcount = 0;
 
         public UI()
         {
@@ -23,6 +28,9 @@ namespace EasyClearGit
         }
         private void UI_Load(object sender, EventArgs e)
         {
+            int UIWidth = 402;
+            this.Width = UIWidth;
+
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(UI.CreateRoundRectRgn(0, 0, base.Width, base.Height, 20, 20));
 
@@ -62,15 +70,31 @@ namespace EasyClearGit
             if (Clipboard.ContainsText())
             {
                 Clipboard.Clear();
+
+                this._addtxtcount++;
+                this.TextNum.Text = this._addtxtcount.ToString();
+
+                this._addtotalcount++;
+                this.TotalNum.Text = this._addtotalcount.ToString();
             }
             if (Clipboard.ContainsImage())
             {
                 Clipboard.Clear();
+
+                this._addimgcount++;
+                this.ImagesNum.Text = this._addimgcount.ToString();
+
+                this._addtotalcount++;
+                this.TotalNum.Text = this._addtotalcount.ToString();
             }
-            if (Clipboard.ContainsAudio())
+            /*if (Clipboard.ContainsAudio())
             {
                 Clipboard.Clear();
-            }
+            }*/
+        }
+        private void UI_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            DCUI.Show();
         }
     }
 }

@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.ToggleFeatureBar = new System.Windows.Forms.Panel();
             this.ToggleHeader = new System.Windows.Forms.Label();
-            this.ClearTick = new System.Windows.Forms.Timer(this.components);
             this.ToggleClearing = new System.Windows.Forms.Button();
+            this.ClearTick = new System.Windows.Forms.Timer(this.components);
             this.StatsHeader = new System.Windows.Forms.Label();
             this.TextNum = new System.Windows.Forms.Label();
             this.PhrasesText = new System.Windows.Forms.Label();
@@ -57,16 +57,11 @@
             // 
             this.ToggleHeader.AutoSize = true;
             this.ToggleHeader.Font = new System.Drawing.Font("Marlett", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToggleHeader.Location = new System.Drawing.Point(14, 29);
+            this.ToggleHeader.Location = new System.Drawing.Point(14, 32);
             this.ToggleHeader.Name = "ToggleHeader";
             this.ToggleHeader.Size = new System.Drawing.Size(60, 37);
             this.ToggleHeader.TabIndex = 3;
             this.ToggleHeader.Text = "On";
-            // 
-            // ClearTick
-            // 
-            this.ClearTick.Interval = 1;
-            this.ClearTick.Tick += new System.EventHandler(this.ClearTick_Tick);
             // 
             // ToggleClearing
             // 
@@ -76,12 +71,17 @@
             this.ToggleClearing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
             this.ToggleClearing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.ToggleClearing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ToggleClearing.Location = new System.Drawing.Point(316, 25);
+            this.ToggleClearing.Location = new System.Drawing.Point(315, 25);
             this.ToggleClearing.Name = "ToggleClearing";
             this.ToggleClearing.Size = new System.Drawing.Size(51, 47);
             this.ToggleClearing.TabIndex = 2;
             this.ToggleClearing.UseVisualStyleBackColor = true;
             this.ToggleClearing.Click += new System.EventHandler(this.ToggleClearing_Click);
+            // 
+            // ClearTick
+            // 
+            this.ClearTick.Interval = 1;
+            this.ClearTick.Tick += new System.EventHandler(this.ClearTick_Tick);
             // 
             // StatsHeader
             // 
@@ -158,7 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(381, 322);
+            this.ClientSize = new System.Drawing.Size(380, 314);
             this.ControlBox = false;
             this.Controls.Add(this.TotalText);
             this.Controls.Add(this.TotalNum);
@@ -175,6 +175,7 @@
             this.ShowInTaskbar = false;
             this.Text = "EasyClear";
             this.Load += new System.EventHandler(this.UI_Load);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.UI_MouseDoubleClick);
             this.ToggleFeatureBar.ResumeLayout(false);
             this.ToggleFeatureBar.PerformLayout();
             this.ResumeLayout(false);

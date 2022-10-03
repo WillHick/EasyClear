@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoubleClickUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoubleClickUI.Designer.cs">
+      <DependentUpon>DoubleClickUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DoubleClickUI.resx">
+      <DependentUpon>DoubleClickUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI.resx">
       <DependentUpon>UI.cs</DependentUpon>
     </EmbeddedResource>
