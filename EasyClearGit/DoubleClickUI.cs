@@ -16,39 +16,38 @@ namespace EasyClearGit
         [DllImport("Gdi32.dll")]
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
+        EasyClearGit.Properties.MoreInfoUI MUI = new EasyClearGit.Properties.MoreInfoUI();
+
         public DoubleClickUI()
         {
             InitializeComponent();
         }
         private void DoubleClickUI_Load(object sender, EventArgs e)
         {
-            this.CenterToScreen();
+            int UIWidth = 402;
+            this.Width = UIWidth;
 
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = Region.FromHrgn(DoubleClickUI.CreateRoundRectRgn(0, 0, base.Width, base.Height, 20, 20));
+
+            Rectangle workingArea = Screen.GetWorkingArea(this);
+            this.Location = new Point(workingArea.Right - 14 - base.Size.Width, workingArea.Bottom - 344 - base.Size.Height);
         }
         private void HideMore_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
-        private void TopMostToggle_Click(object sender, EventArgs e)
-        {
-            if (this.TopMost == false)
-            {                
-                TopMostToggle.BackgroundImage = EasyClearGit.Properties.Resources.icons8_checkmark_192;
-
-                this.TopMost = true;
-            }
-            else if (this.TopMost == true)
-            {
-                TopMostToggle.BackgroundImage = EasyClearGit.Properties.Resources.icons8_uncheckmark_192;
-
-                this.TopMost = false;
-            }
-        }
         private void ExitApp_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        private void RestartApp_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+        private void AppInfo_Click(object sender, EventArgs e)
+        {
+            MUI.Show();
         }
     }
 }

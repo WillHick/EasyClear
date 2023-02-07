@@ -31,9 +31,9 @@
             this.MoreFeatureBar = new System.Windows.Forms.Panel();
             this.HideMore = new System.Windows.Forms.Button();
             this.MoreHeader = new System.Windows.Forms.Label();
-            this.TopMostHeader = new System.Windows.Forms.Label();
-            this.TopMostToggle = new System.Windows.Forms.Button();
             this.ExitApp = new System.Windows.Forms.Button();
+            this.RestartApp = new System.Windows.Forms.Button();
+            this.AppInfo = new System.Windows.Forms.Button();
             this.MoreFeatureBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             this.MoreFeatureBar.Controls.Add(this.MoreHeader);
             this.MoreFeatureBar.Location = new System.Drawing.Point(-2, -1);
             this.MoreFeatureBar.Name = "MoreFeatureBar";
-            this.MoreFeatureBar.Size = new System.Drawing.Size(398, 96);
+            this.MoreFeatureBar.Size = new System.Drawing.Size(384, 96);
             this.MoreFeatureBar.TabIndex = 3;
             // 
             // HideMore
@@ -55,7 +55,7 @@
             this.HideMore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.HideMore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HideMore.Font = new System.Drawing.Font("MS Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.HideMore.Location = new System.Drawing.Point(332, 22);
+            this.HideMore.Location = new System.Drawing.Point(319, 22);
             this.HideMore.Name = "HideMore";
             this.HideMore.Size = new System.Drawing.Size(60, 60);
             this.HideMore.TabIndex = 4;
@@ -73,32 +73,6 @@
             this.MoreHeader.TabIndex = 3;
             this.MoreHeader.Text = "More";
             // 
-            // TopMostHeader
-            // 
-            this.TopMostHeader.AutoSize = true;
-            this.TopMostHeader.Font = new System.Drawing.Font("Marlett", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TopMostHeader.Location = new System.Drawing.Point(16, 118);
-            this.TopMostHeader.Name = "TopMostHeader";
-            this.TopMostHeader.Size = new System.Drawing.Size(142, 30);
-            this.TopMostHeader.TabIndex = 5;
-            this.TopMostHeader.Text = "Is TopMost";
-            // 
-            // TopMostToggle
-            // 
-            this.TopMostToggle.BackgroundImage = global::EasyClearGit.Properties.Resources.icons8_uncheckmark_192;
-            this.TopMostToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.TopMostToggle.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.TopMostToggle.FlatAppearance.BorderSize = 0;
-            this.TopMostToggle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.TopMostToggle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.TopMostToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TopMostToggle.Location = new System.Drawing.Point(331, 113);
-            this.TopMostToggle.Name = "TopMostToggle";
-            this.TopMostToggle.Size = new System.Drawing.Size(48, 41);
-            this.TopMostToggle.TabIndex = 4;
-            this.TopMostToggle.UseVisualStyleBackColor = true;
-            this.TopMostToggle.Click += new System.EventHandler(this.TopMostToggle_Click);
-            // 
             // ExitApp
             // 
             this.ExitApp.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -106,8 +80,8 @@
             this.ExitApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.ExitApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.ExitApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitApp.Font = new System.Drawing.Font("Marlett", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitApp.Location = new System.Drawing.Point(10, 157);
+            this.ExitApp.Font = new System.Drawing.Font("Marlett", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitApp.Location = new System.Drawing.Point(10, 205);
             this.ExitApp.Name = "ExitApp";
             this.ExitApp.Size = new System.Drawing.Size(217, 45);
             this.ExitApp.TabIndex = 6;
@@ -116,17 +90,52 @@
             this.ExitApp.UseVisualStyleBackColor = true;
             this.ExitApp.Click += new System.EventHandler(this.ExitApp_Click);
             // 
+            // RestartApp
+            // 
+            this.RestartApp.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.RestartApp.FlatAppearance.BorderSize = 0;
+            this.RestartApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.RestartApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.RestartApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RestartApp.Font = new System.Drawing.Font("Marlett", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RestartApp.Location = new System.Drawing.Point(10, 159);
+            this.RestartApp.Name = "RestartApp";
+            this.RestartApp.Size = new System.Drawing.Size(261, 45);
+            this.RestartApp.TabIndex = 7;
+            this.RestartApp.Text = "Restart Application";
+            this.RestartApp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RestartApp.UseVisualStyleBackColor = true;
+            this.RestartApp.Click += new System.EventHandler(this.RestartApp_Click);
+            // 
+            // AppInfo
+            // 
+            this.AppInfo.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.AppInfo.FlatAppearance.BorderSize = 0;
+            this.AppInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.AppInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.AppInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AppInfo.Font = new System.Drawing.Font("Marlett", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppInfo.Location = new System.Drawing.Point(10, 111);
+            this.AppInfo.Name = "AppInfo";
+            this.AppInfo.Size = new System.Drawing.Size(225, 45);
+            this.AppInfo.TabIndex = 8;
+            this.AppInfo.Text = "More Information";
+            this.AppInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AppInfo.UseVisualStyleBackColor = true;
+            this.AppInfo.Click += new System.EventHandler(this.AppInfo_Click);
+            // 
             // DoubleClickUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(394, 213);
+            this.ClientSize = new System.Drawing.Size(380, 266);
             this.ControlBox = false;
+            this.Controls.Add(this.AppInfo);
+            this.Controls.Add(this.RestartApp);
             this.Controls.Add(this.ExitApp);
-            this.Controls.Add(this.TopMostToggle);
             this.Controls.Add(this.MoreFeatureBar);
-            this.Controls.Add(this.TopMostHeader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DoubleClickUI";
@@ -137,7 +146,6 @@
             this.MoreFeatureBar.ResumeLayout(false);
             this.MoreFeatureBar.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -146,8 +154,8 @@
         private System.Windows.Forms.Panel MoreFeatureBar;
         private System.Windows.Forms.Label MoreHeader;
         private System.Windows.Forms.Button HideMore;
-        private System.Windows.Forms.Label TopMostHeader;
-        private System.Windows.Forms.Button TopMostToggle;
         private System.Windows.Forms.Button ExitApp;
+        private System.Windows.Forms.Button RestartApp;
+        private System.Windows.Forms.Button AppInfo;
     }
 }

@@ -55,6 +55,12 @@
     <Compile Include="DoubleClickUI.Designer.cs">
       <DependentUpon>DoubleClickUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoreInfoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreInfoUI.Designer.cs">
+      <DependentUpon>MoreInfoUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DoubleClickUI.resx">
       <DependentUpon>DoubleClickUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoreInfoUI.resx">
+      <DependentUpon>MoreInfoUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI.resx">
       <DependentUpon>UI.cs</DependentUpon>
