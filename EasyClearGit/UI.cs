@@ -28,6 +28,9 @@ namespace EasyClearGit
         }
         private void UI_Load(object sender, EventArgs e)
         {
+            /*  Add Start Up Message
+            MessageBox.Show("");*/
+
             int UIWidth = 402;
             this.Width = UIWidth;
 
@@ -87,10 +90,13 @@ namespace EasyClearGit
                 this._addtotalcount++;
                 this.TotalNum.Text = this._addtotalcount.ToString();
             }
-            /*if (Clipboard.ContainsAudio())
+            // Remove Audio Data From Clipboard
+            if (Clipboard.ContainsAudio())
             {
                 Clipboard.Clear();
-            }*/
+
+                // No Int Values Added
+            }
         }
         private void UI_MouseDoubleClick(object sender, MouseEventArgs e)
         {
