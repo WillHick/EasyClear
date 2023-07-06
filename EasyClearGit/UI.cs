@@ -68,7 +68,7 @@ namespace EasyClearGit
         }
         private void ClearTick_Tick(object sender, EventArgs e)
         {
-            //Add Stat Count And Clear
+            //All Clear Functions and Stat Updates
             
             if (Clipboard.ContainsText())
             {
@@ -90,12 +90,11 @@ namespace EasyClearGit
                 this._addtotalcount++;
                 this.TotalNum.Text = this._addtotalcount.ToString();
             }
-            // Remove Audio Data From Clipboard
             if (Clipboard.ContainsAudio())
             {
                 Clipboard.Clear();
 
-                // No Int Values Added
+                //Add Audio Stats
             }
         }
         private void UI_MouseDoubleClick(object sender, MouseEventArgs e)
